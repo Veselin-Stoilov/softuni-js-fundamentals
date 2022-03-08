@@ -1,2 +1,2 @@
 # softuni-js-fundamentals
-This repo jolds basic projects of JS fundamentals
+This repo holds basic projects of JS fundamentals
