@@ -1,4 +1,5 @@
 let express = require('express');
+let {getCatalog, getDetails} = require('./catalog');
 
 let app = express();
 
@@ -12,28 +13,10 @@ app.get('/',(req, res) => {
 
 });
 
-app.get('/catalog', (req, res) => {
-    res.send(`
-    <h1>Catalog</h1>
-    <a href= "/">Home</a>
-    <a href= "/about">About</a>
+app.get('/catalog', getCatalog)
 
-    <ul>
-        <li><a href= "/catalog/672045">Product S/N 672045</a>
-    </ul>
-    `);
-})
 
-app.get('/catalog/672045', (req, res) => {
-    res.send(`
-    <h1>Products Details</h1>
-    <h2>Products S/N 672045</h2>
-    <p>Product details</p>
-    <a href= "/">Home</a>
-    <a href= "/catalog">Catalog</a>
-    <a href= "/about">About</a>
-    `);
-})
+app.get('/catalog/:productID', getDetails)
 
 app.get('/about', (req, res) => {
     res.send(`
@@ -43,6 +26,14 @@ app.get('/about', (req, res) => {
     <p>My demo web project</p>
     <p>App created using Node.js and Express</p>
     <p>Veselin Stoilov &copy; 2021</p>
+    `);
+})
+
+app.get('*', (req, res) => {
+    res.send(`
+    <h1>Error 404 Not Found</h1>
+    <p>The page you requested does not exist</p>
+    
     `);
 })
 

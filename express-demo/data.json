@@ -1,0 +1,17 @@
+{
+    "123": {
+    "name": "Oil Filter",
+    "price": 49.90,
+    "qty": 30
+    },
+    "456": {
+        "name": "Wiper Blade",
+        "price": 15.99,
+        "qty": 20
+    },
+    "789": {
+        "name": "Headlight Bulb",
+        "price": 7.50,
+        "qty": 18
+    }
+}
