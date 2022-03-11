@@ -1,15 +1,14 @@
 let express = require('express');
+let {engine} = require('express-handlebars');
 let {getCatalog, getDetails} = require('./catalog');
 
 let app = express();
 
+app.engine('hbs', engine());
+app.set('view engine', 'hbs')
+
 app.get('/',(req, res) => {
-    res.send(`
-    <h1>Home Page</h1>
-    <a href= "/about">About</a>
-    <a href= "/catalog">Catalog</a>
-    <p>Welcome to our site</p>
-    `);
+    res.render('index', {layout: false});
 
 });
 

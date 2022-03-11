@@ -14,6 +14,7 @@
   "author": "VS",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3"
   }
 }
