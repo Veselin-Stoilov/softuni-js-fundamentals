@@ -4,7 +4,9 @@ let {getCatalog, getDetails} = require('./catalog');
 
 let app = express();
 
-app.engine('hbs', engine());
+app.engine('hbs', engine({
+    extname: 'hbs'
+}));
 app.set('view engine', 'hbs')
 
 app.get('/',(req, res) => {

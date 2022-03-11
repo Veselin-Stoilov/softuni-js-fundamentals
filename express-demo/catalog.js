@@ -4,18 +4,12 @@ let {getAll, getById} = require('./model')
 function getCatalog(req, res) {
     let products = getAll();
 
-    let all_products = Object.entries(products).map(([id, p]) => `<li><a href= "/catalog/${id}">${p.name}</a></li>`).join('');
+    let viewModel = Object.entries(products).map(([id, p]) => ({id, name: p.name}));
 
-    res.send(`
-    <h1>Catalog</h1>
-    <a href= "/">Home</a>
-    <a href= "/about">About</a>
-
-    <ul>
-        ${all_products}   
-    </ul>
-    `);
+    res.render('catalog', {layout: false, products: viewModel})
 }
+
+
 
 function getDetails(req, res) {
     let id = req.params.productID;
