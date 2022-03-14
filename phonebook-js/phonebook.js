@@ -6,6 +6,10 @@
 
 const Contact = require('./models/Contact');
 
+const fs = require('fs');
+
+// let contacts = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
+
 let contacts = [
 	new Contact('Peter', '+4541248986'),
 	new Contact('John', '+4544247878'),
@@ -19,7 +23,7 @@ function getContacts() {
 
 function addContact(name, phone) {
 	let contact = new Contact(name, phone);
-	contact.push(contact);
+	contacts.push(contact);
 }
 
 module.exports = {
