@@ -64,13 +64,13 @@ main section:nth-child(2) article h3{
     
 }
 footer article {
-    width: 40%;
+    width: 49%;
     display: inline-block
     
 }
 footer article:nth-child(1) {
     text-align: left;
-    font-size: 12px;
+    font-size: 15px;
 }
 footer article:nth-child(2) {
     text-align: right;
