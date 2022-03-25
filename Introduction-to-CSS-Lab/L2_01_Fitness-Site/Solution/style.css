@@ -1,0 +1,80 @@
+body {
+    background: #F0F1F5;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    padding: 2rem 12rem;;
+}
+body header p {
+    color: orange;
+    font-weight: bold;
+    padding: 3px;
+}
+nav {
+    text-align: right;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+nav ul li a {
+    color: orange;
+    text-decoration: none;
+}
+header > p {
+    float: left;
+}
+main section:nth-child(1) {
+    background-image: url(../Requirements-and-Resources/Images/picture.jpg);
+    margin-top: 3rem;
+    background-size: cover;
+    background-position: center;
+    padding: 11rem 15rem 11rem 15rem;
+}
+main section:nth-child(1) h1 {
+    color: white
+}
+main section:nth-child(1) h1 span {
+    color: orange
+}
+main section:nth-child(1) button {
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+}
+    
+main section:nth-child(2) article{
+    padding: 17px;
+    width: 29%;
+    background: orange;
+    color: white;
+    display: inline-block;
+    
+}
+main section:nth-child(2) article h3{
+    text-align: center;
+    
+}
+footer article {
+    width: 40%;
+    display: inline-block
+    
+}
+footer article:nth-child(1) {
+    text-align: left;
+    font-size: 12px;
+}
+footer article:nth-child(2) {
+    text-align: right;
+}
+footer article:nth-child(2) i {
+    padding: 5px;
+}
